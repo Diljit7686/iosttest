@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
     
     //fsm,
-    //fake changes
+    //fake changeseffdf
     
     @IBOutlet weak var circle: UIImageView!
     @IBOutlet weak var square: UIImageView!
