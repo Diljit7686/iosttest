@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     var gameScore:Int = 0
 
     
-    //fs
+    //fsm,
     //fake changes
     
     @IBOutlet weak var circle: UIImageView!
