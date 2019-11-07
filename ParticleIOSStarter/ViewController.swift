@@ -26,41 +26,50 @@ class ViewController: UIViewController {
     var timer: Timer?
     var runCount = 0
     
-    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    @IBAction func startButton(_ sender: UIButton) {
+        
+        timeLabel.isHidden = false
+        fireTimer();
+        
+       // turnParticleGreen();
+        
+    }
     //fsm,
     //fake changeseffdf
-    
+
     @IBOutlet weak var circle: UIImageView!
     @IBOutlet weak var square: UIImageView!
     @IBOutlet weak var triangle: UIImageView!
-    
+
     @IBOutlet weak var userInput: UITextField!
     @IBOutlet weak var questionTextView: UITextView!
-    
+
     @IBOutlet weak var correctOrNot: UITextView!
-    
+
     @IBAction func questionButton(_ sender: UIButton) {
+
+    
         
-        
-        
-        
+
         let text: String = userInput.text ?? "anything here"
     questionTextView.text = "\(text)"
     }
     @IBAction func last(_ sender: UIButton) {
         questionTextView.text = "choose Circle"
-        
-        
+
+
     }
     @IBAction func middle(_ sender: UIButton) {
         questionTextView.text = "choose Square"
     }
-    
+
     @IBAction func next(_ sender: UIButton) {
-        
+
         questionTextView.text = "choose Triangle"
     }
-    
+
     
     
     
@@ -84,6 +93,11 @@ class ViewController: UIViewController {
             let tapCircle = UITapGestureRecognizer(target: self, action: #selector(ViewController.turnParticleGreen))
             circle.addGestureRecognizer(tapCircle)
             circle.isUserInteractionEnabled = true
+            
+            
+            
+            
+            
             
             
             let tapSquare = UITapGestureRecognizer(target: self, action: #selector(ViewController.turnParticleRed))
@@ -290,18 +304,18 @@ class ViewController: UIViewController {
         
         
         
-        // 3. done! 
+        // 3. done!
         
         
     }
-    @objc func fireTimer() {
+    @objc private func fireTimer() {
         print("Timer fired!")
         runCount += 1
         
         let str = String(runCount)
-        timerLabel.text = str
+        timeLabel.text = str
         
-        if runCount == 3 {
+        if runCount == 20 {
             timer?.invalidate()
         }
     }

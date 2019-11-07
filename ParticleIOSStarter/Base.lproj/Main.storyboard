@@ -115,13 +115,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLv-lY-QN6">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLv-lY-QN6">
                                 <rect key="frame" x="107" y="326" width="122" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiB-GT-oBw">
+                                <rect key="frame" x="127" y="260" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KAA-QT-MgE"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stop" translatesAutoresizingMaskIntoConstraints="NO" id="GFz-jJ-duc">
                                 <rect key="frame" x="141" y="489" width="34" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -136,7 +144,7 @@
                         <outlet property="questionTextView" destination="npa-NG-XMp" id="WA4-4A-GHZ"/>
                         <outlet property="scoreLabel" destination="jzl-Uf-pRY" id="d1J-MA-c7x"/>
                         <outlet property="square" destination="GFz-jJ-duc" id="kVo-lo-XPO"/>
-                        <outlet property="timerLabel" destination="RLv-lY-QN6" id="dub-XB-8zz"/>
+                        <outlet property="timeLabel" destination="RLv-lY-QN6" id="689-Gi-297"/>
                         <outlet property="triangle" destination="cDd-wq-a3a" id="2dP-S6-IWd"/>
                         <outlet property="userInput" destination="X6f-nY-rqA" id="qYW-hp-fme"/>
                     </connections>
