@@ -23,8 +23,10 @@ class ViewController: UIViewController {
 
     // MARK: Other variables
     var gameScore:Int = 0
-
+    var timer: Timer?
+    var runCount = 0
     
+    @IBOutlet weak var timerLabel: UILabel!
     //fsm,
     //fake changeseffdf
     
@@ -71,7 +73,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: true)
         
         
         var output = questionTextView.text
@@ -291,6 +293,17 @@ class ViewController: UIViewController {
         // 3. done!
         
         
+    }
+    @objc func fireTimer() {
+        print("Timer fired!")
+        runCount += 1
+        
+        let str = String(runCount)
+        timerLabel.text = str
+        
+        if runCount == 3 {
+            timer?.invalidate()
+        }
     }
     
 }
